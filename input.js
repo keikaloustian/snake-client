@@ -22,6 +22,15 @@ const handleUserInput = function (data) {
     connection.write('Move: right');
   }
   
+  if (data === 'm') {
+    connection.write('Say: shhhhhhhhhhhh');
+  }
+
+  if (data === 'n') {
+    connection.write('Say: aight Imma head out');
+  }
+
+
 };
 
 const setupInput = function (connObject) {

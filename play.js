@@ -1,27 +1,9 @@
-const connect = require('./client');
+const { connect } = require('./client');
+const { setupInput } = require("./input");
 
 // connect to server and begin playing
+console.log("Connecting ...");
 connect();
 
-// callback for key press event listener
-const handleUserInput = function (data) {
-  // Ctrl+C to quit
-  if (data === '\u0003') {
-    process.exit();
-  }
-
-  
-};
-
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
-
-  stdin.on('data', handleUserInput);
-
-  return stdin;
-};
 
 setupInput();

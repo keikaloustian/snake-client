@@ -3,7 +3,6 @@ const { setupInput } = require("./input");
 
 // connect to server and begin playing
 console.log("Connecting ...");
-connect();
 
 
-setupInput();
+setupInput(connect());

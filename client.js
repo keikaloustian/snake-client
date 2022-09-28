@@ -15,14 +15,20 @@ const connect = function () {
     console.log(data);
   });
 
-  // once connection established, notify and send name
+
+  // once connection established
   conn.on('connect', () => {
+    // display notification
     console.log('Connected to game server');
-    conn.write('Name: Heh');
+
+    // send name
+    conn.write('Name: ZZZ');
+
+    // // send move signals
+    // conn.write("Move: up");
+
   })
-
-
-
+  
   return conn;
 };
 
